@@ -1,10 +1,12 @@
 <template>
-    <div class="card text-center">
-        <img :src="product.image" alt="product thumb" class="thumb">
-        <p class="font-bold m-4 text-gray-500 truncate"> {{ product.title }} </p>
-        <p class="text-xl my-7"> Price - ${{ product.price }} </p>
+    <div class="card text-center flex flex-col gap-y-4">
+        <div>
+            <img :src="product.image" alt="product thumb" class="thumb">
+            <p class="font-bold my-4 text-gray-500 truncate"> {{ product.title }} </p>
+            <p class="text-xl "> Price - ${{ product.price }} </p>
+        </div>
         <NuxtLink :to="`/products/${product.id}`">
-            <p class="btn">View Details</p>
+            <p class="btn mt-3">View Details</p>
         </NuxtLink>
     </div>
 </template>

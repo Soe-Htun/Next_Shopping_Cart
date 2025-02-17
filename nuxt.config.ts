@@ -3,5 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  runtimeConfig: {
+    currencyKey: process.env.CURRENCY_API_KEY
+  }
 })
